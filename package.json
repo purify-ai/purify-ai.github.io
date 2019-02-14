@@ -1,0 +1,23 @@
+{
+  "name": "purify-ai-website",
+  "version": "0.1.0",
+  "description": "",
+  "license": "Apache-2.0",
+  "private": true,
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "watch": "NODE_ENV=development parcel src/index.html --no-hmr --open",
+    "build": "NODE_ENV=production parcel build src/index.html --no-source-maps",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.11.0"
+  },
+  "dependencies": {
+    "waypoints": "^4.0.1",
+    "wow.js": "^1.2.2"
+  }
+}
