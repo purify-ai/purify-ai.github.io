@@ -138,9 +138,29 @@
           <div class="col-md-6 col-lg-5">
             <div class="box">
               <a href="https://github.com/purify-ai/geacc-models" target="_blank" style="position:absolute; top:0; left:0; height:100%; width:100%;">
-                <div class="icon"><i class="ion-ios-people-outline" style="color: #ff689b;"></i></div>
+                <div class="icon"><i class="ion-ios-people-outline" style="color: #00C39B;"></i></div>
                 <h4 class="title"><a href="https://github.com/purify-ai/geacc-models">Geacc Model <i class="fab fa-github"></i></a></h4>
                 <p class="description">General Audience Content Classifier (Geacc) is a pre-trained deep neural network model for classifying images which are suitable for general audiences with a particular focus on children and adolescents below the age of 12.</p>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-5">
+            <div class="box">
+              <a href="https://github.com/purify-ai/geacc-crx" target="_blank" style="position:absolute; top:0; left:0; height:100%; width:100%;">
+                <div class="icon"><i class="ion-social-chrome-outline" style="color: #e9bf06;"></i></div>
+                <h4 class="title"><a href="https://github.com/purify-ai/geacc-crx">Geacc Chrome Extension <i class="fab fa-github"></i></a></h4>
+                <p class="description">Google Chrome extension which uses Geacc pre-trained model and TensorFlow.js to detect explicit images in browser.</p><br/><br/>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-5">
+            <div class="box">
+              <a href="https://github.com/purify-ai/geacc-tfjs-demo" target="_blank" style="position:absolute; top:0; left:0; height:100%; width:100%;">
+                <div class="icon"><i class="ion-social-nodejs" style="color: #ff689b;"></i></div>
+                <h4 class="title"><a href="https://github.com/purify-ai/geacc-tfjs-demo">Geacc TensorFlow.js Demo <i class="fab fa-github"></i></a></h4>
+                <p class="description">Demo web app which uses Geacc pre-trained model and TensorFlow.js to detect explicit images.</p>
               </a>
             </div>
           </div>
@@ -191,7 +211,7 @@
               <form action="" method="post" role="form" class="contactForm">
                 <div class="form-row">
                   <div class="form-group col-lg-6">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    <input type="text" name="fullname" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                     <div class="validation"></div>
                   </div>
                   <div class="form-group col-lg-6">
@@ -200,7 +220,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Your Message. If you use one of our solutions, please include estimated number of protected users/children."></textarea>
+                  <textarea class="form-control" name="message" rows="5" maxlength="1000" data-rule="required" data-msg="Please write something for us" placeholder="Your Message. If you use one of our solutions, please include estimated number of protected users/children."></textarea>
                   <div class="validation"></div>
                 </div>
                 <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>

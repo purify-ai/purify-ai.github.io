@@ -57,6 +57,7 @@ jQuery(document).ready(function($) {
         i.next('.validation').html((ierror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
       }
     });
+
     f.children('textarea').each(function() { // run all inputs
 
       var i = $(this); // current input
@@ -88,15 +89,23 @@ jQuery(document).ready(function($) {
         i.next('.validation').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
       }
     });
-    if (ferror) return false;
-    else var str = $(this).serialize();
-    var action = $(this).attr('action');
-    if( ! action ) {
-      action = 'contactform/contactform.php';
+
+    if (ferror) {
+      return false;
+    } else {
+      var str = $(this).serializeObject();
     }
+
+    var action = $(this).attr('action');
+
+    if (!action) {
+      action = 'https://script.google.com/macros/s/AKfycbyqaJP191-bOhoKqHEi7vnfXsOWQqENyu96I8hEEMlS17tDGj8/exec';
+    }
+    
     $.ajax({
-      type: "POST",
+      type: "GET",
       url: action,
+      dataType: "json",
       data: str,
       success: function(msg) {
         // alert(msg);
